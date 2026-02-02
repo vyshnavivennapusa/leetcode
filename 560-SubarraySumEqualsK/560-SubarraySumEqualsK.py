@@ -1,24 +1,20 @@
-# Last updated: 2/2/2026, 8:30:03 PM
+# Last updated: 2/2/2026, 9:14:05 PM
 1class Solution(object):
-2    def subarraySum(self, nums, k):
+2    def removeDuplicates(self, nums):
 3        """
 4        :type nums: List[int]
-5        :type k: int
-6        :rtype: int
-7        """
-8        presum=0
-9        cnt=0
-10        hash={}
-11        hash[0]=1
-12        for i in range(0,len(nums)):
-13            presum+=nums[i]
-14           
-15            if presum-k in hash:
-16                cnt+=hash[presum-k]
-17            if presum not in hash:
-18                hash[presum]=1
-19            elif presum in hash:
-20                hash[presum]+=1
-21        return cnt
-22
-23        
+5        :rtype: int
+6        """
+7        j=0
+8        n= len(nums)
+9        for i in range(1,len(nums)):
+10            if nums[i]!=nums[j]:
+11                j+=1
+12                nums[j]=nums[i]
+13                
+14                
+15        
+16
+17        return j+1
+18
+19
