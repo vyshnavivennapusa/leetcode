@@ -1,4 +1,4 @@
-# Last updated: 2/10/2026, 9:40:49 PM
+# Last updated: 2/10/2026, 9:55:56 PM
 1class Solution(object):
 2    def findMin(self, nums):
 3        """
